@@ -2,7 +2,7 @@
   "monday": {
     "meals": [
       "Larb Gai (Thai Minced Chicken Salad)",
-      "Steamed Fish with Ginger & Soy"
+      "Steamed Fish with Ginger & Scallions"
     ],
     "links": [
       "recipes/larb-gai.html",
@@ -11,11 +11,11 @@
   },
   "tuesday": {
     "meals": [
-      "Chicken Lettuce Wraps",
-      "Thai Green Curry Shrimp"
+      "Thai Lettuce Wraps",
+      "Green Curry Shrimp"
     ],
     "links": [
-      "recipes/chicken-lettuce-wraps.html",
+      "recipes/lettuce-wraps.html",
       "recipes/green-curry-shrimp.html"
     ]
   },
@@ -26,33 +26,33 @@
     ],
     "links": [
       "recipes/yum-woon-sen.html",
-      "recipes/garlic-broccoli-mushroom.html"
+      "recipes/garlic-broccoli-mushrooms.html"
     ]
   },
   "thursday": {
     "meals": [
       "Miso Soup with Greens",
-      "Thai Basil Chicken (Pad Krapow)"
+      "Thai Basil Chicken (Pad Krapow Gai)"
     ],
     "links": [
-      "recipes/miso-soup-greens.html",
-      "recipes/pad-krapow.html"
+      "recipes/miso-soup.html",
+      "recipes/pad-krapow-gai.html"
     ]
   },
   "friday": {
     "meals": [
-      "Chinese Cucumber Salad",
-      "Lemongrass Chicken + Pickled Veg"
+      "Chinese Cucumber Salad + Dumplings",
+      "Lemongrass Chicken Skewers"
     ],
     "links": [
-      "recipes/cucumber-salad.html",
-      "recipes/lemongrass-chicken.html"
+      "recipes/chinese-cucumber-salad.html",
+      "recipes/lemongrass-chicken-skewers.html"
     ]
   },
   "saturday": {
     "meals": [
-      "Rice Paper Rolls (Shrimp)",
-      "Yu Xiang Eggplant (Light)"
+      "Rice Paper Rolls (Shrimp/Tofu)",
+      "Yu Xiang Eggplant (Szechuan-Style)"
     ],
     "links": [
       "recipes/rice-paper-rolls.html",
@@ -61,12 +61,10 @@
   },
   "sunday": {
     "meals": [
-      "\u2014",
-      "Tom Yum Soup (Light)"
+      "Tom Yum Soup (Chicken/Mushroom)"
     ],
     "links": [
-      "#",
-      "recipes/tom-yum-light.html"
+      "recipes/tom-yum-chicken.html"
     ]
   }
 }
