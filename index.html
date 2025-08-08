@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Daily Grocery Viewer</title>
-  <link rel="stylesheet" href="style.css">
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="🥢 Daily Grocery List Viewer" />
@@ -18,12 +17,15 @@
   <meta name="twitter:title" content="🥢 Daily Grocery List Viewer" />
   <meta name="twitter:description" content="View and share your healthy Thai & Chinese-inspired grocery lists for every day of the week." />
   <meta name="twitter:image" content="https://seuth325.github.io/grocery-planner/preview.jpg" />
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>🥢 Daily Grocery List</h1>
   <div id="print-day"></div>
 
-  <select id="day-select">
+  <label for="day-select" class="sr-only">Select day</label>
+  <select id="day-select" aria-label="Select day">
     <option value="monday">Monday</option>
     <option value="tuesday">Tuesday</option>
     <option value="wednesday">Wednesday</option>
@@ -40,9 +42,13 @@
 
   <ul id="grocery-list"></ul>
 
-  <button id="share-btn">📤 Share This List</button>
-  <button id="print-btn">🖨️ Print</button>
+  <div class="btn-row">
+    <button id="share-btn">📤 Share</button>
+    <button id="copy-btn">📋 Copy All Items</button>
+    <button id="print-btn">🖨️ Print</button>
+  </div>
   <p id="share-status" style="display:none;color:green;">✅ Link copied to clipboard!</p>
+  <p id="copy-status" style="display:none;color:green;">✅ Grocery items copied!</p>
 
   <script src="script.js"></script>
 </body>
