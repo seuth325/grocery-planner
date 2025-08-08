@@ -5,18 +5,18 @@
       "Steamed Fish with Ginger & Soy"
     ],
     "links": [
-      "./recipes/larb-gai.html",
-      "./recipes/steamed-fish-ginger-soy.html"
+      "recipes/larb-gai.html",
+      "recipes/steamed-fish.html"
     ]
   },
   "tuesday": {
     "meals": [
-      "Chicken Lettuce Wraps",
-      "Thai Green Curry (Shrimp)"
+      "Thai Lettuce Wraps",
+      "Thai Green Curry Shrimp"
     ],
     "links": [
-      "./recipes/chicken-lettuce-wraps.html",
-      "./recipes/green-curry-shrimp.html"
+      "recipes/lettuce-wraps.html",
+      "recipes/green-curry-shrimp.html"
     ]
   },
   "wednesday": {
@@ -25,48 +25,48 @@
       "Garlic Broccoli & Mushrooms"
     ],
     "links": [
-      "./recipes/yum-woon-sen.html",
-      "./recipes/garlic-broccoli-mushrooms.html"
+      "recipes/yum-woon-sen.html",
+      "recipes/garlic-broccoli-mushrooms.html"
     ]
   },
   "thursday": {
     "meals": [
-      "Miso Soup + Cucumber Salad",
+      "Miso Soup with Greens",
       "Thai Basil Chicken (Pad Krapow)"
     ],
     "links": [
-      "./recipes/miso-soup.html",
-      "./recipes/pad-krapow.html"
+      "recipes/miso-soup.html",
+      "recipes/pad-krapow.html"
     ]
   },
   "friday": {
     "meals": [
-      "Chinese Cucumber Salad + Dumplings",
+      "Chinese Cucumber Salad",
       "Lemongrass Chicken Skewers"
     ],
     "links": [
-      "./recipes/chinese-cucumber-salad.html",
-      "./recipes/lemongrass-chicken.html"
+      "recipes/cucumber-salad.html",
+      "recipes/lemongrass-chicken.html"
     ]
   },
   "saturday": {
     "meals": [
       "Rice Paper Rolls",
-      "Yu Xiang Eggplant (Szechuan-style)"
+      "Yu Xiang Eggplant"
     ],
     "links": [
-      "./recipes/rice-paper-rolls.html",
-      "./recipes/yu-xiang-eggplant.html"
+      "recipes/rice-paper-rolls.html",
+      "recipes/yu-xiang-eggplant.html"
     ]
   },
   "sunday": {
     "meals": [
       "\u2014",
-      "Tom Yum Soup (Chicken & Mushrooms)"
+      "Tom Yum Soup"
     ],
     "links": [
       "#",
-      "./recipes/tom-yum.html"
+      "recipes/tom-yum.html"
     ]
   }
 }
