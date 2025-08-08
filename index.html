@@ -4,6 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Daily Grocery Viewer</title>
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="🥢 Daily Grocery List Viewer" />
+  <meta property="og:description" content="View and share your healthy Thai & Chinese-inspired grocery lists for every day of the week." />
+  <meta property="og:image" content="https://seuth325.github.io/grocery-planner/preview.jpg" />
+  <meta property="og:url" content="https://seuth325.github.io/grocery-planner/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="🥢 Daily Grocery List Viewer" />
+  <meta name="twitter:description" content="View and share your healthy Thai & Chinese-inspired grocery lists for every day of the week." />
+  <meta name="twitter:image" content="https://seuth325.github.io/grocery-planner/preview.jpg" />
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,6 +33,9 @@
   </select>
 
   <ul id="grocery-list"></ul>
+
+  <button id="share-btn">📤 Share This List</button>
+  <p id="share-status" style="display:none;color:green;">✅ Link copied to clipboard!</p>
 
   <script src="script.js"></script>
 </body>
