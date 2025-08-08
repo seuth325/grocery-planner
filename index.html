@@ -4,30 +4,42 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Daily Grocery Viewer</title>
+
+  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="🥢 Daily Grocery List Viewer" />
   <meta property="og:description" content="View and share your healthy Thai & Chinese-inspired grocery lists for every day of the week." />
   <meta property="og:image" content="https://seuth325.github.io/grocery-planner/preview.jpg" />
   <meta property="og:url" content="https://seuth325.github.io/grocery-planner/" />
   <meta property="og:type" content="website" />
+
+  <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="🥢 Daily Grocery List Viewer" />
   <meta name="twitter:description" content="View and share your healthy Thai & Chinese-inspired grocery lists for every day of the week." />
   <meta name="twitter:image" content="https://seuth325.github.io/grocery-planner/preview.jpg" />
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>🥢 Daily Grocery List</h1>
   <div id="print-day"></div>
 
-  <select id="day-select">
-    <option value="monday">Monday</option>
-    <option value="tuesday">Tuesday</option>
-    <option value="wednesday">Wednesday</option>
-    <option value="thursday">Thursday</option>
-    <option value="friday">Friday</option>
-    <option value="saturday">Saturday</option>
-    <option value="sunday">Sunday</option>
-  </select>
+  <div class="controls">
+    <select id="day-select">
+      <option value="monday">Monday</option>
+      <option value="tuesday">Tuesday</option>
+      <option value="wednesday">Wednesday</option>
+      <option value="thursday">Thursday</option>
+      <option value="friday">Friday</option>
+      <option value="saturday">Saturday</option>
+      <option value="sunday">Sunday</option>
+    </select>
+    <button id="share-btn">📤 Share</button>
+    <button id="print-btn">🖨️ Print</button>
+    <button id="copy-btn">📋 Copy All</button>
+    <button id="copy-by-category-btn">📋 Copy by Category</button>
+    <span id="share-status" style="display:none;color:green;margin-left:8px;"></span>
+  </div>
 
   <div id="recipe-banner">
     <h2 id="recipe-title"></h2>
@@ -35,15 +47,6 @@
   </div>
 
   <ul id="grocery-list"></ul>
-
-  <div class="btn-row">
-    <button id="share-btn">📤 Share This List</button>
-    <button id="print-btn">🖨️ Print</button>
-    <button id="copy-btn">📋 Copy All Items</button>
-    <button id="copy-cat-btn">📋 Copy by Category</button>
-  </div>
-  <p id="share-status" style="display:none;color:green;">✅ Link copied to clipboard!</p>
-  <p id="copy-status" style="display:none;color:green;">✅ Grocery items copied!</p>
 
   <script src="script.js"></script>
 </body>

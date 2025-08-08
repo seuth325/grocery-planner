@@ -1,29 +1,28 @@
-
-body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; padding: 2rem; background: #f9f9f9; }
-h1 { color: #444; margin-bottom: .25rem; }
-#recipe-banner { margin: .5rem 0 1rem; }
-#recipe-title { margin: .25rem 0; }
-ul { list-style: none; padding: 0; }
-li { background: white; padding: .5rem; margin-bottom: .25rem; border-radius: 4px; box-shadow: 0 0 5px rgba(0,0,0,.05); }
-select { padding: .5rem; font-size: 1rem; margin: .5rem 0 1rem; }
-.btn-row { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem; }
-button { padding: .5rem 1rem; font-size: 1rem; background: #4CAF50; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
-button:hover { background: #45a049; }
+body{font-family:sans-serif;padding:2rem;background:#f9f9f9;}
+h1{color:#444;margin-bottom:.25rem;}
+.controls{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-bottom:1rem;}
+select,button{padding:.5rem;font-size:1rem;}
+button{background:#4CAF50;color:#fff;border:none;border-radius:4px;cursor:pointer;}
+button:hover{background:#45a049;}
+ul{list-style:none;padding:0;}
+li{background:#fff;padding:.5rem;margin-bottom:.25rem;border-radius:4px;box-shadow:0 0 5px rgba(0,0,0,.05);}
+#recipe-title{margin:.5rem 0 .25rem;}
+#recipe-links li a{text-decoration:none;}
+#print-day{color:#666;margin-bottom:.5rem;}
 
 /* PRINT */
-@media print {
-  body { background: #fff !important; color: #000 !important; padding: .5in; }
-  #day-select, #share-btn, #print-btn, #copy-btn, #copy-cat-btn, #share-status, #copy-status { display: none !important; }
-  h1 { font-size: 1.6rem; margin: 0 0 .25in 0; border-bottom: 2px solid #000; padding-bottom: .15in; }
-  #print-day { display: block !important; font-size: 1rem; margin-top: -.2in; margin-bottom: .2in; }
-  #recipe-banner { margin: 0 0 .2in 0; padding: 0; }
-  #recipe-title { font-size: 1.1rem; margin-bottom: .05in; }
-  #recipe-links { margin: 0; padding-left: .15in; }
-  #recipe-links li { margin: .02in 0; }
-  ul#grocery-list { columns: 2; column-gap: .35in; }
-  ul#grocery-list li { break-inside: avoid; padding: .04in 0; margin: 0; border: 0; box-shadow: none !important; font-size: .98rem; }
-  * { box-shadow: none !important; background: transparent !important; }
-  h1, #recipe-banner, #grocery-list { page-break-inside: avoid; }
-  @page { margin: .5in; }
+@media print{
+  body{background:#fff !important;color:#000 !important;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;padding:.5in;}
+  #day-select,#share-btn,#print-btn,#copy-btn,#copy-by-category-btn,#share-status{display:none !important;}
+  h1{font-size:1.6rem;margin:0 0 .25in 0;border-bottom:2px solid #000;padding-bottom:.15in;}
+  #print-day{display:block !important;font-size:1rem;margin-top:-.2in;margin-bottom:.2in;color:#000;}
+  #recipe-banner{margin:0 0 .2in 0;padding:0;}
+  #recipe-title{font-size:1.1rem;margin-bottom:.05in;}
+  #recipe-links{margin:0;padding-left:.15in;}
+  #recipe-links li{margin:.02in 0;}
+  ul#grocery-list{columns:2;column-gap:.35in;}
+  ul#grocery-list li{break-inside:avoid;padding:.04in 0;margin:0;border:0;box-shadow:none !important;font-size:.98rem;}
+  *{box-shadow:none !important;background:transparent !important;}
+  h1,#recipe-banner,#grocery-list{page-break-inside:avoid;}
+  @page{margin:.5in;}
 }
-#print-day { display: none; color: #333; }
