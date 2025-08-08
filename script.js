@@ -3,6 +3,40 @@ function getQueryParam(param) {
   return urlParams.get(param);
 }
 
+let recipesData = {};
+
+function loadRecipes(day) {
+  fetch('data/recipes.json')
+    .then(res => res.json())
+    .then(data => {
+      recipesData = data;
+      displayRecipes(day);
+    });
+}
+
+function displayRecipes(day) {
+  const recipeInfo = recipesData[day];
+  const titleEl = document.getElementById('recipe-title');
+  const linksEl = document.getElementById('recipe-links');
+  linksEl.innerHTML = '';
+
+  if (recipeInfo) {
+    const prettyDay = day.charAt(0).toUpperCase() + day.slice(1);
+    titleEl.textContent = `🍽️ Meals for ${prettyDay}`;
+    recipeInfo.meals.forEach((meal, idx) => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = recipeInfo.links[idx] || '#';
+      a.textContent = meal;
+      a.target = "_blank";
+      li.appendChild(a);
+      linksEl.appendChild(li);
+    });
+  } else {
+    titleEl.textContent = '';
+  }
+}
+
 function loadDay(day) {
   const dropdown = document.getElementById('day-select');
   dropdown.value = day;
@@ -17,6 +51,7 @@ function loadDay(day) {
         list.appendChild(li);
       });
     });
+  displayRecipes(day);
 }
 
 // Share button logic
@@ -27,11 +62,7 @@ document.getElementById('share-btn').addEventListener('click', async () => {
 
   if (navigator.share) {
     try {
-      await navigator.share({
-        title: `Grocery List for ${day}`,
-        text: shareText,
-        url: shareUrl
-      });
+      await navigator.share({ title: `Grocery List for ${day}`, text: shareText, url: shareUrl });
     } catch (err) {
       console.error("Share cancelled or failed", err);
     }
@@ -44,7 +75,8 @@ document.getElementById('share-btn').addEventListener('click', async () => {
 });
 
 document.getElementById('day-select').addEventListener('change', function () {
-  loadDay(this.value);
+  const day = this.value;
+  loadDay(day);
 });
 
 // Auto-detect today's day if not provided in URL
@@ -53,4 +85,5 @@ if (!dayParam) {
   const today = new Date().toLocaleString('en-US', { weekday: 'long' }).toLowerCase();
   dayParam = today;
 }
+loadRecipes(dayParam);
 loadDay(dayParam.toLowerCase());
