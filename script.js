@@ -21,12 +21,11 @@ function displayRecipes(day) {
   linksEl.innerHTML = '';
 
   if (recipeInfo) {
-    const prettyDay = day.charAt(0).toUpperCase() + day.slice(1);
-    titleEl.textContent = `🍽️ Meals for ${prettyDay}`;
-    recipeInfo.meals.forEach((meal, idx) => {
+    titleEl.textContent = `🍽️ Meals for ${day.charAt(0).toUpperCase() + day.slice(1)}`;
+    recipeInfo.meals.forEach((meal, i) => {
       const li = document.createElement('li');
       const a = document.createElement('a');
-      a.href = recipeInfo.links[idx] || '#';
+      a.href = recipeInfo.links[i] || '#';
       a.textContent = meal;
       a.target = "_blank";
       li.appendChild(a);
@@ -35,6 +34,13 @@ function displayRecipes(day) {
   } else {
     titleEl.textContent = '';
   }
+}
+
+function updatePrintHeader(day) {
+  const pretty = day.charAt(0).toUpperCase() + day.slice(1);
+  const todayISO = new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+  const el = document.getElementById('print-day');
+  el.textContent = `📅 ${pretty} • ${todayISO}`;
 }
 
 function loadDay(day) {
@@ -52,38 +58,43 @@ function loadDay(day) {
       });
     });
   displayRecipes(day);
+  updatePrintHeader(day);
 }
 
 // Share button logic
-document.getElementById('share-btn').addEventListener('click', async () => {
-  const day = document.getElementById('day-select').value;
-  const shareUrl = `${window.location.origin}${window.location.pathname}?day=${day}`;
-  const shareText = `🥢 Here's the grocery list for ${day.charAt(0).toUpperCase() + day.slice(1)}: ${shareUrl}`;
-
-  if (navigator.share) {
-    try {
-      await navigator.share({ title: `Grocery List for ${day}`, text: shareText, url: shareUrl });
-    } catch (err) {
-      console.error("Share cancelled or failed", err);
+document.addEventListener('click', async (e) => {
+  if (e.target && e.target.id === 'share-btn') {
+    const day = document.getElementById('day-select').value;
+    const shareUrl = `${window.location.origin}${window.location.pathname}?day=${day}`;
+    const shareText = `🥢 Here's the grocery list for ${day.charAt(0).toUpperCase() + day.slice(1)}: ${shareUrl}`;
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: `Grocery List for ${day}`, text: shareText, url: shareUrl });
+      } catch (err) { console.error('Share cancelled or failed', err); }
+    } else {
+      await navigator.clipboard.writeText(shareText);
+      const status = document.getElementById('share-status');
+      status.style.display = 'block';
+      setTimeout(() => (status.style.display = 'none'), 2000);
     }
-  } else {
-    await navigator.clipboard.writeText(shareText);
-    const status = document.getElementById('share-status');
-    status.style.display = 'block';
-    setTimeout(() => (status.style.display = 'none'), 2000);
+  }
+});
+
+// Print button
+document.addEventListener('click', (e) => {
+  if (e.target && e.target.id === 'print-btn') {
+    window.print();
   }
 });
 
 document.getElementById('day-select').addEventListener('change', function () {
-  const day = this.value;
-  loadDay(day);
+  loadDay(this.value);
 });
 
-// Auto-detect today's day if not provided in URL
+// Initial load: URL param or today's day
 let dayParam = getQueryParam('day');
 if (!dayParam) {
-  const today = new Date().toLocaleString('en-US', { weekday: 'long' }).toLowerCase();
-  dayParam = today;
+  dayParam = new Date().toLocaleString('en-US', { weekday: 'long' }).toLowerCase();
 }
 loadRecipes(dayParam);
-loadDay(dayParam.toLowerCase());
+loadDay(dayParam);
