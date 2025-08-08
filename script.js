@@ -1,5 +1,11 @@
-document.getElementById('day-select').addEventListener('change', function () {
-  const day = this.value;
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
+function loadDay(day) {
+  const dropdown = document.getElementById('day-select');
+  dropdown.value = day;
   fetch(`data/${day}_grocery.json`)
     .then(res => res.json())
     .then(data => {
@@ -11,5 +17,11 @@ document.getElementById('day-select').addEventListener('change', function () {
         list.appendChild(li);
       });
     });
+}
+
+document.getElementById('day-select').addEventListener('change', function () {
+  loadDay(this.value);
 });
-document.getElementById('day-select').dispatchEvent(new Event('change'));
+
+const dayParam = getQueryParam('day') || 'monday';
+loadDay(dayParam.toLowerCase());
