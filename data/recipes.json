@@ -1,0 +1,72 @@
+{
+  "monday": {
+    "meals": [
+      "Larb Gai (Thai Minced Chicken Salad)",
+      "Steamed Fish with Ginger & Scallion"
+    ],
+    "links": [
+      "recipes/larb-gai.html",
+      "recipes/steamed-fish-ginger-scallion.html"
+    ]
+  },
+  "tuesday": {
+    "meals": [
+      "Chicken Lettuce Wraps",
+      "Thai Green Curry with Shrimp"
+    ],
+    "links": [
+      "recipes/chicken-lettuce-wraps.html",
+      "recipes/thai-green-curry-shrimp.html"
+    ]
+  },
+  "wednesday": {
+    "meals": [
+      "Yum Woon Sen (Glass Noodle Salad)",
+      "Broccoli & Mushroom Garlic Stir-Fry"
+    ],
+    "links": [
+      "recipes/yum-woon-sen.html",
+      "recipes/broccoli-mushroom-garlic-stirfry.html"
+    ]
+  },
+  "thursday": {
+    "meals": [
+      "Miso Soup with Tofu & Wakame",
+      "Thai Basil Chicken (Pad Krapow)"
+    ],
+    "links": [
+      "recipes/miso-soup-tofu-wakame.html",
+      "recipes/thai-basil-chicken.html"
+    ]
+  },
+  "friday": {
+    "meals": [
+      "Chinese Cucumber Salad",
+      "Lemongrass Chicken Skewers"
+    ],
+    "links": [
+      "recipes/cucumber-salad.html",
+      "recipes/lemongrass-chicken-skewers.html"
+    ]
+  },
+  "saturday": {
+    "meals": [
+      "Vietnamese Rice Paper Rolls",
+      "Yu Xiang Eggplant (Szechuan-Style)"
+    ],
+    "links": [
+      "recipes/rice-paper-rolls.html",
+      "recipes/yuxiang-eggplant.html"
+    ]
+  },
+  "sunday": {
+    "meals": [
+      "Leftover Lunch (Chef's Choice)",
+      "Tom Yum Soup (Chicken & Mushrooms)"
+    ],
+    "links": [
+      "#",
+      "recipes/tom-yum-chicken.html"
+    ]
+  }
+}
