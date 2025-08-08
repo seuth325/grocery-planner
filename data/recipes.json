@@ -11,11 +11,11 @@
   },
   "tuesday": {
     "meals": [
-      "Thai Lettuce Wraps",
+      "Chicken Lettuce Wraps",
       "Thai Green Curry Shrimp"
     ],
     "links": [
-      "recipes/lettuce-wraps.html",
+      "recipes/chicken-lettuce-wraps.html",
       "recipes/green-curry-shrimp.html"
     ]
   },
@@ -26,7 +26,7 @@
     ],
     "links": [
       "recipes/yum-woon-sen.html",
-      "recipes/garlic-broccoli-mushrooms.html"
+      "recipes/garlic-broccoli-mushroom.html"
     ]
   },
   "thursday": {
@@ -35,14 +35,14 @@
       "Thai Basil Chicken (Pad Krapow)"
     ],
     "links": [
-      "recipes/miso-soup.html",
+      "recipes/miso-soup-greens.html",
       "recipes/pad-krapow.html"
     ]
   },
   "friday": {
     "meals": [
       "Chinese Cucumber Salad",
-      "Lemongrass Chicken Skewers"
+      "Lemongrass Chicken + Pickled Veg"
     ],
     "links": [
       "recipes/cucumber-salad.html",
@@ -51,8 +51,8 @@
   },
   "saturday": {
     "meals": [
-      "Rice Paper Rolls",
-      "Yu Xiang Eggplant"
+      "Rice Paper Rolls (Shrimp)",
+      "Yu Xiang Eggplant (Light)"
     ],
     "links": [
       "recipes/rice-paper-rolls.html",
@@ -62,11 +62,11 @@
   "sunday": {
     "meals": [
       "\u2014",
-      "Tom Yum Soup"
+      "Tom Yum Soup (Light)"
     ],
     "links": [
       "#",
-      "recipes/tom-yum.html"
+      "recipes/tom-yum-light.html"
     ]
   }
 }
