@@ -2,7 +2,7 @@
   "monday": {
     "meals": [
       "Larb Gai (Thai Minced Chicken Salad)",
-      "Steamed Fish with Ginger & Scallions"
+      "Steamed Fish with Ginger & Soy"
     ],
     "links": [
       "recipes/larb-gai.html",
@@ -11,8 +11,8 @@
   },
   "tuesday": {
     "meals": [
-      "Thai Lettuce Wraps",
-      "Green Curry Shrimp"
+      "Chicken Lettuce Wraps",
+      "Thai Green Curry (Shrimp)"
     ],
     "links": [
       "recipes/lettuce-wraps.html",
@@ -21,22 +21,22 @@
   },
   "wednesday": {
     "meals": [
-      "Glass Noodle Salad (Yum Woon Sen)",
-      "Garlic Broccoli & Mushrooms"
+      "Yum Woon Sen (Glass Noodle Salad)",
+      "Broccoli & Mushroom Stir-fry"
     ],
     "links": [
       "recipes/yum-woon-sen.html",
-      "recipes/garlic-broccoli-mushrooms.html"
+      "recipes/broccoli-mushroom.html"
     ]
   },
   "thursday": {
     "meals": [
-      "Miso Soup with Greens",
-      "Thai Basil Chicken (Pad Krapow Gai)"
+      "Miso Soup + Cucumber Salad",
+      "Thai Basil Chicken (Pad Krapow)"
     ],
     "links": [
       "recipes/miso-soup.html",
-      "recipes/pad-krapow-gai.html"
+      "recipes/pad-krapow.html"
     ]
   },
   "friday": {
@@ -45,26 +45,28 @@
       "Lemongrass Chicken Skewers"
     ],
     "links": [
-      "recipes/chinese-cucumber-salad.html",
-      "recipes/lemongrass-chicken-skewers.html"
+      "recipes/cucumber-salad.html",
+      "recipes/lemongrass-chicken.html"
     ]
   },
   "saturday": {
     "meals": [
-      "Rice Paper Rolls (Shrimp/Tofu)",
-      "Yu Xiang Eggplant (Szechuan-Style)"
+      "Rice Paper Rolls",
+      "Sichuan Eggplant (Yu Xiang)"
     ],
     "links": [
       "recipes/rice-paper-rolls.html",
-      "recipes/yu-xiang-eggplant.html"
+      "recipes/sichuan-eggplant.html"
     ]
   },
   "sunday": {
     "meals": [
-      "Tom Yum Soup (Chicken/Mushroom)"
+      "Use Leftovers",
+      "Tom Yum Soup"
     ],
     "links": [
-      "recipes/tom-yum-chicken.html"
+      "recipes/leftovers.html",
+      "recipes/tom-yum.html"
     ]
   }
 }
