@@ -1,38 +1,44 @@
+:root{
+  --bg1: #FFF4E6; /* light mango */
+  --bg2: #FFE0B2; /* curry cream */
+  --bg3: #FFD28A; /* golden turmeric */
+  --accent: #FF8C42;
+  --accent-light: #FFA600;
+}
+/* Animated mango-curry background */
 body {
+  margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  background: linear-gradient(135deg, #FFF4E6 0%, #FFE0B2 60%, #FFD28A 100%);
+  background: linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 60%, var(--bg3) 100%);
   background-attachment: fixed;
   animation: kitchenGlow 30s ease-in-out infinite;
   padding: 2rem;
 }
 @keyframes kitchenGlow {
-  0% { background: linear-gradient(135deg, #FFF4E6 0%, #FFE0B2 60%, #FFD28A 100%); }
-  50% { background: linear-gradient(135deg, #FFE0B2 0%, #FFD28A 60%, #FFF4E6 100%); }
-  100% { background: linear-gradient(135deg, #FFF4E6 0%, #FFE0B2 60%, #FFD28A 100%); }
+  0% { background: linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 60%, var(--bg3) 100%); }
+  50% { background: linear-gradient(135deg, var(--bg2) 0%, var(--bg3) 60%, var(--bg1) 100%); }
+  100% { background: linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 60%, var(--bg3) 100%); }
 }
-@media (prefers-reduced-motion: reduce) { body { animation: none; } }
-
+@media (prefers-reduced-motion: reduce) {
+  body { animation: none; }
+}
 h1 {
   font-size: 2rem;
   background: linear-gradient(90deg, #FF8C42, #FFA600);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
+  margin: 0 0 0.25rem 0;
 }
-#recipe-banner {
-  background-color: rgba(255, 166, 0, 0.12);
-  border-radius: 10px;
-  padding: 0.8em 1em;
-  margin-bottom: 1em;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+.day-date {
+  font-size: 1.1rem;
+  color: #6b6b6b;
+  margin-top: -0.2rem;
+  margin-bottom: 0.8rem;
 }
-#recipe-title { margin: 0 0 0.5em 0; font-weight: bold; color: #FF8C42; }
-#recipe-links li a { color: #e67a2e; text-decoration: none; font-weight: 500; }
-#recipe-links li a:hover { text-decoration: underline; }
-
-/* Buttons */
+.actions { margin-bottom: 0.6rem; }
 button {
-  background-color: #FF8C42;
+  background-color: var(--accent);
   color: white;
   border: none;
   padding: 0.6em 1.2em;
@@ -43,39 +49,38 @@ button {
   margin: 0.2em;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-button:hover { background-color: #FFA600; box-shadow: 0 4px 12px rgba(255,166,0,0.4); }
+button:hover { background-color: var(--accent-light); box-shadow: 0 4px 12px rgba(255, 166, 0, 0.4); }
 button:active { background-color: #e67a2e; }
 #share-status { margin-top: 0.5em; color: #2E2E2E; font-weight: bold; }
 
-/* Grocery list stripes */
+/* Recipe banner */
+#recipe-banner {
+  background-color: rgba(255, 166, 0, 0.12);
+  border-radius: 10px;
+  padding: 0.8em 1em;
+  margin-bottom: 1em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+#recipe-title { margin: 0 0 0.5em 0; font-weight: bold; color: var(--accent); }
+#recipe-links { margin: 0; padding-left: 1em; }
+#recipe-links li a { color: #e67a2e; text-decoration: none; font-weight: 500; }
+#recipe-links li a:hover { text-decoration: underline; }
+
+/* Grocery list */
+#grocery-list { list-style: none; padding: 0; margin: 0; }
+#grocery-list li { padding: 0.4em 0.6em; border-radius: 6px; }
+
+/* Category sections */
 .category-header {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
   font-weight: 700;
-  color: #FF8C42;
+  color: var(--accent);
 }
-ul.category-list {
-  list-style: none;
-  margin: 0 0 0.25em 0;
-  padding: 0;
-}
-ul.category-list li {
-  padding: 0.4em 0.6em;
-  border-radius: 6px;
-}
+ul.category-list { list-style: none; margin: 0 0 0.25em 0; padding: 0; }
+ul.category-list li { padding: 0.4em 0.6em; border-radius: 6px; }
 ul.category-list li:nth-child(odd) { background-color: rgba(255, 166, 0, 0.08); }
-ul.category-list li:nth-child(even) { background-color: rgba(255,255,255,0.6); }
-
-/* Modal */
-.modal { position: fixed; inset: 0; display: none; background: rgba(0,0,0,0.35); z-index: 999; }
-.modal.show { display: block; }
-.modal-content {
-  background: #fff; width: min(92vw, 420px); margin: 10vh auto; border-radius: 12px;
-  padding: 1rem 1.2rem; box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-}
-.modal-content h3 { margin: 0 0 0.6rem 0; color: #FF8C42; }
-.switch-row { display: flex; align-items: center; gap: 0.6rem; margin: 0.4rem 0; font-weight: 500; }
-.modal-actions { display: flex; justify-content: flex-end; margin-top: 0.8rem; }
+ul.category-list li:nth-child(even) { background-color: rgba(255, 255, 255, 0.6); }
 
 /* Footer */
 #app-footer{
@@ -86,14 +91,36 @@ ul.category-list li:nth-child(even) { background-color: rgba(255,255,255,0.6); }
   text-align: center;
   border-top: 1px solid rgba(0,0,0,0.08);
 }
-#app-footer a { color: #FF8C42; text-decoration: none; }
+#app-footer a { color: var(--accent); text-decoration: none; }
 #app-footer a:hover { text-decoration: underline; }
 
-/* Print */
+/* Modal */
+.modal { position: fixed; inset: 0; display: none; background: rgba(0,0,0,0.35); z-index: 999; }
+.modal.show { display: block; }
+.modal-content {
+  background: #fff; width: min(92vw, 420px); margin: 10vh auto; border-radius: 12px;
+  padding: 1rem 1.2rem; box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+.modal-content h3 { margin: 0 0 0.6rem 0; color: var(--accent); }
+.switch-row { display: flex; align-items: center; gap: 0.6rem; margin: 0.4rem 0; font-weight: 500; }
+.modal-actions { display: flex; justify-content: flex-end; margin-top: 0.8rem; }
+
+/* About modal */
+.about-modal { position: fixed; inset: 0; background: rgba(0,0,0,0.35); display: none; align-items: center; justify-content: center; z-index: 1000; }
+.about-modal.show { display: flex; }
+.about-content {
+  background: white; border-radius: 10px; padding: 1.2em; max-width: 520px; width: 92%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+.about-content h2 { margin-top: 0; color: var(--accent); }
+.about-content pre { background: #f9f9f9; padding: 0.6em; border-radius: 6px; white-space: pre-wrap; }
+
+/* Print rules */
 @media print {
   body { animation: none; background: #fff !important; padding: 0.5in; }
-  #day-select, button, #share-status, #app-footer { display: none !important; }
-  h1 { color: #000; -webkit-text-fill-color: initial; background: none; }
+  #day-select, .actions, #share-status, #app-footer { display: none !important; }
+  h1 { -webkit-text-fill-color: #000; background: none; color: #000; }
   #recipe-banner { box-shadow: none; }
-  ul.category-list li { background: transparent; }
+  ul.category-list { columns: 2; column-gap: 0.35in; }
+  ul.category-list li { break-inside: avoid; }
 }

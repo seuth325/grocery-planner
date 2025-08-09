@@ -8,7 +8,7 @@
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="🥢 Daily Grocery List Viewer" />
   <meta property="og:description" content="View and share your healthy Thai & Chinese-inspired grocery lists for every day of the week." />
-  <meta property="og:image" content="preview.jpg" />
+  <meta property="og:image" content="https://seuth325.github.io/grocery-planner/preview.jpg" />
   <meta property="og:url" content="https://seuth325.github.io/grocery-planner/" />
   <meta property="og:type" content="website" />
 
@@ -16,7 +16,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="🥢 Daily Grocery List Viewer" />
   <meta name="twitter:description" content="View and share your healthy Thai & Chinese-inspired grocery lists for every day of the week." />
-  <meta name="twitter:image" content="preview.jpg" />
+  <meta name="twitter:image" content="https://seuth325.github.io/grocery-planner/preview.jpg" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
@@ -31,7 +31,7 @@
 </head>
 <body>
   <h1>🥢 Daily Grocery List</h1>
-  <div id="print-day"></div>
+  <p id="day-date" class="day-date"></p>
 
   <div id="recipe-banner">
     <h2 id="recipe-title"></h2>
@@ -48,7 +48,7 @@
     <option value="sunday">Sunday</option>
   </select>
 
-  <div>
+  <div class="actions">
     <button id="share-btn">📤 Share</button>
     <button id="print-btn">🖨️ Print</button>
     <button id="copy-btn">📋 Copy All</button>
@@ -63,18 +63,27 @@
   <div id="settings-modal" class="modal" aria-hidden="true">
     <div class="modal-content">
       <h3>Preferences</h3>
-      <label class="switch-row"><input type="checkbox" id="pref-group"><span>Group items by category</span></label>
-      <label class="switch-row"><input type="checkbox" id="pref-qty"><span>Show quantities</span></label>
-      <div class="modal-actions"><button id="settings-close">Done</button></div>
+      <label class="switch-row">
+        <input type="checkbox" id="pref-group"> <span>Group items by category</span>
+      </label>
+      <label class="switch-row">
+        <input type="checkbox" id="pref-qty"> <span>Show quantities</span>
+      </label>
+      <div class="modal-actions">
+        <button id="settings-close">Done</button>
+      </div>
     </div>
   </div>
 
   <footer id="app-footer" aria-label="version">
-    <span>Grocery Planner — v1.0.0 “mango‑curry final”</span>
+    <span>Grocery Planner — <span id="version-span">v?</span></span>
     <span> · </span>
     <a href="https://seuth325.github.io/grocery-planner/" target="_blank" rel="noopener">Site</a>
+    <span> · </span>
+    <button id="about-btn" style="background:none;border:none;color:#FF8C42;cursor:pointer;">ℹ️ About</button>
   </footer>
 
   <script src="script.js"></script>
+  <script src="about.js"></script>
 </body>
 </html>
