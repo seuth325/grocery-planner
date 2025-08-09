@@ -12,11 +12,59 @@
   "tuesday": {
     "meals": [
       "Thai Lettuce Wraps",
-      "Green Curry Shrimp"
+      "Red Curry Shrimp"
     ],
     "links": [
       "recipes/lettuce-wraps.html",
-      "recipes/green-curry-shrimp.html"
+      "recipes/red-curry-shrimp.html"
+    ]
+  },
+  "wednesday": {
+    "meals": [
+      "Glass Noodle Salad",
+      "Garlic Mushroom Stir-fry"
+    ],
+    "links": [
+      "recipes/glass-noodle-salad.html",
+      "recipes/mushroom-stirfry.html"
+    ]
+  },
+  "thursday": {
+    "meals": [
+      "Miso Soup & Greens",
+      "Thai Basil Chicken (light)"
+    ],
+    "links": [
+      "recipes/miso-soup.html",
+      "recipes/basil-chicken.html"
+    ]
+  },
+  "friday": {
+    "meals": [
+      "Quick Cucumber Pickles",
+      "Lemongrass Chicken"
+    ],
+    "links": [
+      "recipes/cucumber-pickles.html",
+      "recipes/lemongrass-chicken.html"
+    ]
+  },
+  "saturday": {
+    "meals": [
+      "Shrimp Spring Rolls",
+      "Eggplant with Minced Poultry"
+    ],
+    "links": [
+      "recipes/spring-rolls.html",
+      "recipes/eggplant-mince.html"
+    ]
+  },
+  "sunday": {
+    "meals": [
+      "Tom Yum\u2013style Chicken & Mushrooms"
+    ],
+    "links": [
+      "recipes/tom-yum-chicken.html"
     ]
   }
 }
