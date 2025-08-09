@@ -1,6 +1,41 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tom Yum Soup</title></head><body style="font-family:sans-serif;padding:1.2rem;">
-<h1>Tom Yum Soup</h1>
-<ol><li>Simmer lemongrass, kaffir leaf, galangal.</li><li>Add mushrooms/chicken; finish with lime & chili.</li></ol>
-<p><a href="../index.html">← Back to planner</a></p>
-</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tom Yum Shrimp</title>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+  <h1>Tom Yum Shrimp</h1>
+  <p class="day-date">Hot‑sour broth with lemongrass, kaffir lime, and shrimp.</p>
+  <img id="hero" alt="Tom Yum Shrimp" data-photo="../photos/tom-yum.jpg" data-illustration="../illustrations/tom-yum-illustration.png" style="width:100%;max-width:820px;border-radius:12px;display:block;margin:0 auto 1rem;"/>
+  <script>
+    (function(){ const mode = localStorage.getItem('pref_image_style') || 'illustration';
+      const hero = document.getElementById('hero'); const src = mode==='photo' ? hero.dataset.photo : hero.dataset.illustration; hero.src = src; })();
+  </script>
+
+  <div class="recipe-card" style="max-width:820px;margin:0 auto;">
+    <h2>Ingredients (2 servings)</h2>
+    <ul>
+      <li>2 cups low‑sodium broth</li>
+      <li>1 lemongrass stalk</li>
+      <li>3 kaffir lime leaves</li>
+      <li>1–2 Thai chilies</li>
+      <li>6–8 oz shrimp</li>
+      <li>Mushrooms, sliced</li>
+      <li>Lime juice</li>
+    </ul>
+
+    <h2>Steps</h2>
+    <ol>
+      <li>Simmer broth with lemongrass, lime leaves, chilies. Add mushrooms.</li>
+      <li>Add shrimp until pink. Finish with lime juice.</li>
+    </ol>
+
+    <h3>Health Tips</h3>
+    <p>Skip added salt; aromatics bring bold flavor.</p>
+
+    <p><a href="../index.html" class="back">← Back to Planner</a></p>
+  </div>
+</body>
+</html>

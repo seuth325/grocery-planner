@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Or Lam (Lao Herb & Eggplant Stew)</title>
-  <style>
-    body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:2rem;background:#fffaf5}
-    h1{background:linear-gradient(90deg,#FF8C42,#FFA600);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-    .wrap{max-width:800px}
-    .card{background:#fff;border-radius:12px;box-shadow:0 8px 22px rgba(0,0,0,.08);padding:1rem;margin-top:1rem}
-    ul{margin:0 0 0 1.2rem}
-    a.back{display:inline-block;margin-top:8px;color:#e67a2e;text-decoration:none;font-weight:700}
-  </style>
+  <link rel="stylesheet" href="../style.css"/>
 </head>
 <body>
-  <div class="wrap">
-    <h1>Or Lam (Lao Herb & Eggplant Stew)</h1>
-    <div class="card">
-      <h3>Ingredients</h3>
-      <ul>
-        <li>8 oz mushrooms (shiitake or mixed)</li>
-<li>2 cups eggplant, chunks (Thai or Chinese)</li>
-<li>1 small onion</li>
-<li>2 cloves garlic</li>
-<li>2 stalks lemongrass, bruised</li>
-<li>2 cups low-sodium chicken or veggie stock</li>
-<li>Handful dill</li>
-<li>Kaffir lime leaves (2–3)</li>
-<li>1 tbsp fish sauce (low sodium)</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Steps</h3>
-      <ol>
-        <li>Sauté onion and garlic; add mushrooms and eggplant, cook until softened.</li>
-<li>Add stock, lemongrass, kaffir leaves; simmer 10–15 minutes.</li>
-<li>Finish with fish sauce and dill. Remove lemongrass before serving.</li>
-      </ol>
-    </div>
-    <a class="back" href="../index.html">← Back</a>
+  <h1>Or Lam (Lao Herb & Eggplant Stew)</h1>
+  <p class="day-date">Comforting stew with lemongrass, dill, mushrooms, and eggplant.</p>
+  <img id="hero" alt="Or Lam (Lao Herb & Eggplant Stew)" data-photo="../photos/or-lam.jpg" data-illustration="../illustrations/or-lam-illustration.png" style="width:100%;max-width:820px;border-radius:12px;display:block;margin:0 auto 1rem;"/>
+  <script>
+    (function(){ const mode = localStorage.getItem('pref_image_style') || 'illustration';
+      const hero = document.getElementById('hero'); const src = mode==='photo' ? hero.dataset.photo : hero.dataset.illustration; hero.src = src; })();
+  </script>
+
+  <div class="recipe-card" style="max-width:820px;margin:0 auto;">
+    <h2>Ingredients (2 servings)</h2>
+    <ul>
+      <li>1 tbsp neutral oil</li>
+      <li>2 cloves garlic, minced</li>
+      <li>1 lemongrass stalk, sliced</li>
+      <li>1 small eggplant, cubed</li>
+      <li>1 cup mushrooms, sliced</li>
+      <li>2 cups low-sodium chicken/veg broth</li>
+      <li>1 cup spinach</li>
+      <li>Handful dill, chopped</li>
+      <li>1 tsp toasted rice powder (optional)</li>
+    </ul>
+
+    <h2>Steps</h2>
+    <ol>
+      <li>Sauté garlic and lemongrass; add eggplant and mushrooms, cook until softened.</li>
+      <li>Add broth; simmer 10–12 min. Stir in spinach and dill at the end.</li>
+      <li>Thicken with toasted rice powder if desired. Season to taste.</li>
+    </ol>
+
+    <h3>Health Tips</h3>
+    <p>Use low‑sodium broth; the herbs provide big flavor without much salt.</p>
+
+    <p><a href="../index.html" class="back">← Back to Planner</a></p>
   </div>
 </body>
 </html>

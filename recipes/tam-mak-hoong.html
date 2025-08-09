@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tam Mak Hoong (Lao Papaya Salad)</title>
-  <style>
-    body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:2rem;background:#fffaf5}
-    h1{background:linear-gradient(90deg,#FF8C42,#FFA600);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-    .wrap{max-width:800px}
-    .card{background:#fff;border-radius:12px;box-shadow:0 8px 22px rgba(0,0,0,.08);padding:1rem;margin-top:1rem}
-    ul{margin:0 0 0 1.2rem}
-    a.back{display:inline-block;margin-top:8px;color:#e67a2e;text-decoration:none;font-weight:700}
-  </style>
+  <link rel="stylesheet" href="../style.css"/>
 </head>
 <body>
-  <div class="wrap">
-    <h1>Tam Mak Hoong (Lao Papaya Salad)</h1>
-    <div class="card">
-      <h3>Ingredients</h3>
-      <ul>
-        <li>2 cups shredded green papaya (or cucumber + carrot matchsticks)</li>
-<li>1 clove garlic</li>
-<li>1–2 Thai chilies</li>
-<li>1–2 tbsp fish sauce (low sodium)</li>
-<li>1–2 tbsp lime juice</li>
-<li>1 tsp palm sugar or honey</li>
-<li>Cherry tomatoes, halved (optional)</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Steps</h3>
-      <ol>
-        <li>Pound chilies and garlic in a mortar (or mince).</li>
-<li>Add palm sugar, fish sauce, lime juice; adjust to taste sweet-sour-salty-hot.</li>
-<li>Toss with shredded papaya (or subs) and tomatoes. Serve immediately.</li>
-      </ol>
-    </div>
-    <a class="back" href="../index.html">← Back</a>
+  <h1>Tam Mak Hoong (Lao Papaya Salad)</h1>
+  <p class="day-date">Crunchy green papaya with lime, chilies, and a touch of funk.</p>
+  <img id="hero" alt="Tam Mak Hoong (Lao Papaya Salad)" data-photo="../photos/tam-mak-hoong.jpg" data-illustration="../illustrations/tam-mak-hoong-illustration.png" style="width:100%;max-width:820px;border-radius:12px;display:block;margin:0 auto 1rem;"/>
+  <script>
+    (function(){ const mode = localStorage.getItem('pref_image_style') || 'illustration';
+      const hero = document.getElementById('hero'); const src = mode==='photo' ? hero.dataset.photo : hero.dataset.illustration; hero.src = src; })();
+  </script>
+
+  <div class="recipe-card" style="max-width:820px;margin:0 auto;">
+    <h2>Ingredients (2 servings)</h2>
+    <ul>
+      <li>2 cups shredded green papaya</li>
+      <li>6 cherry tomatoes, halved</li>
+      <li>6 long beans, chopped</li>
+      <li>1–2 Thai chilies, to taste</li>
+      <li>2 tbsp lime juice</li>
+      <li>1 tsp palm sugar or honey</li>
+      <li>1–2 tsp fish sauce (low sodium)</li>
+    </ul>
+
+    <h2>Steps</h2>
+    <ol>
+      <li>Pound chilies and sugar, then add long beans and tomatoes; bruise lightly.</li>
+      <li>Toss with papaya, lime juice, and fish sauce; taste balance (sour/salty/sweet).</li>
+    </ol>
+
+    <h3>Health Tips</h3>
+    <p>Go lighter on fish sauce; boost lime for brightness. Add toasted peanuts for protein.</p>
+
+    <p><a href="../index.html" class="back">← Back to Planner</a></p>
   </div>
 </body>
 </html>

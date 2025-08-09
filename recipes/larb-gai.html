@@ -1,1 +1,46 @@
-<!doctype html><meta charset='utf-8'><title>Larb Gai</title><h1>Larb Gai</h1><p>Simple steps coming soon.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Larb Gai (Lao/Thai Minced Chicken Salad)</title>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+  <h1>Larb Gai (Lao/Thai Minced Chicken Salad)</h1>
+  <p class="day-date">Bright, herby salad with lime, mint, and toasted rice powder.</p>
+  <img id="hero" alt="Larb Gai (Lao/Thai Minced Chicken Salad)" data-photo="../photos/larb-gai.jpg" data-illustration="../illustrations/larb-gai-illustration.png" style="width:100%;max-width:820px;border-radius:12px;display:block;margin:0 auto 1rem;"/>
+  <script>
+    (function(){ const mode = localStorage.getItem('pref_image_style') || 'illustration';
+      const hero = document.getElementById('hero'); const src = mode==='photo' ? hero.dataset.photo : hero.dataset.illustration; hero.src = src; })();
+  </script>
+
+  <div class="recipe-card" style="max-width:820px;margin:0 auto;">
+    <h2>Ingredients (2 servings)</h2>
+    <ul>
+      <li>1 lb ground chicken</li>
+      <li>2 limes (juice)</li>
+      <li>1 small bunch mint, chopped</li>
+      <li>2 green onions, sliced</li>
+      <li>2 shallots, thinly sliced</li>
+      <li>1–2 Thai chilies, minced</li>
+      <li>1 tbsp fish sauce (low sodium)</li>
+      <li>1 tsp palm sugar or honey</li>
+      <li>1–2 tbsp toasted rice powder</li>
+      <li>Lettuce leaves for serving</li>
+    </ul>
+
+    <h2>Steps</h2>
+    <ol>
+      <li>Brown ground chicken in a dry skillet until cooked; cool slightly.</li>
+      <li>Stir in lime juice, fish sauce, palm sugar, chilies, shallots, and green onions.</li>
+      <li>Fold in mint and toasted rice powder to bind. Taste and adjust acidity/salt.</li>
+      <li>Serve in lettuce cups with extra herbs.</li>
+    </ol>
+
+    <h3>Health Tips</h3>
+    <p>Use low‑sodium fish sauce; add salt at the end. Toasted rice powder thickens without oil.</p>
+
+    <p><a href="../index.html" class="back">← Back to Planner</a></p>
+  </div>
+</body>
+</html>

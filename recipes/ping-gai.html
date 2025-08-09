@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ping Gai (Lao Grilled Chicken)</title>
-  <style>
-    body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:2rem;background:#fffaf5}
-    h1{background:linear-gradient(90deg,#FF8C42,#FFA600);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-    .wrap{max-width:800px}
-    .card{background:#fff;border-radius:12px;box-shadow:0 8px 22px rgba(0,0,0,.08);padding:1rem;margin-top:1rem}
-    ul{margin:0 0 0 1.2rem}
-    a.back{display:inline-block;margin-top:8px;color:#e67a2e;text-decoration:none;font-weight:700}
-  </style>
+  <link rel="stylesheet" href="../style.css"/>
 </head>
 <body>
-  <div class="wrap">
-    <h1>Ping Gai (Lao Grilled Chicken)</h1>
-    <div class="card">
-      <h3>Ingredients</h3>
-      <ul>
-        <li>1.5 lb chicken thighs</li>
-<li>2 cloves garlic, minced</li>
-<li>1 stalk lemongrass, finely minced</li>
-<li>1 tbsp fish sauce (low sodium)</li>
-<li>1 tbsp lime juice</li>
-<li>1 tsp honey</li>
-<li>1 tsp sesame oil (optional)</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Steps</h3>
-      <ol>
-        <li>Marinate chicken with garlic, lemongrass, fish sauce, lime, honey, sesame oil 30–60 minutes.</li>
-<li>Grill or roast at 425°F/220°C until cooked through and charred at edges.</li>
-<li>Rest and slice. Serve with fresh herbs.</li>
-      </ol>
-    </div>
-    <a class="back" href="../index.html">← Back</a>
+  <h1>Ping Gai (Lao Grilled Chicken)</h1>
+  <p class="day-date">Garlic‑lemongrass marinated chicken grilled to juicy perfection.</p>
+  <img id="hero" alt="Ping Gai (Lao Grilled Chicken)" data-photo="../photos/ping-gai.jpg" data-illustration="../illustrations/ping-gai-illustration.png" style="width:100%;max-width:820px;border-radius:12px;display:block;margin:0 auto 1rem;"/>
+  <script>
+    (function(){ const mode = localStorage.getItem('pref_image_style') || 'illustration';
+      const hero = document.getElementById('hero'); const src = mode==='photo' ? hero.dataset.photo : hero.dataset.illustration; hero.src = src; })();
+  </script>
+
+  <div class="recipe-card" style="max-width:820px;margin:0 auto;">
+    <h2>Ingredients (2 servings)</h2>
+    <ul>
+      <li>1.5 lb chicken thighs</li>
+      <li>2 stalks lemongrass, minced</li>
+      <li>3 cloves garlic, minced</li>
+      <li>1 tbsp lime juice</li>
+      <li>1 tsp soy sauce (low sodium)</li>
+      <li>1 tsp fish sauce (low sodium)</li>
+    </ul>
+
+    <h2>Steps</h2>
+    <ol>
+      <li>Marinate chicken with lemongrass, garlic, lime, and sauces 30–60 min.</li>
+      <li>Grill over medium heat until 165°F/74°C. Rest and slice.</li>
+    </ol>
+
+    <h3>Health Tips</h3>
+    <p>Dilute sauces with water to reduce sodium; add more lime for brightness.</p>
+
+    <p><a href="../index.html" class="back">← Back to Planner</a></p>
   </div>
 </body>
 </html>

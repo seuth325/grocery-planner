@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sien Savanh (Lao Beef Jerky Salad)</title>
-  <style>
-    body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:2rem;background:#fffaf5}
-    h1{background:linear-gradient(90deg,#FF8C42,#FFA600);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-    .wrap{max-width:800px}
-    .card{background:#fff;border-radius:12px;box-shadow:0 8px 22px rgba(0,0,0,.08);padding:1rem;margin-top:1rem}
-    ul{margin:0 0 0 1.2rem}
-    a.back{display:inline-block;margin-top:8px;color:#e67a2e;text-decoration:none;font-weight:700}
-  </style>
+  <link rel="stylesheet" href="../style.css"/>
 </head>
 <body>
-  <div class="wrap">
-    <h1>Sien Savanh (Lao Beef Jerky Salad)</h1>
-    <div class="card">
-      <h3>Ingredients</h3>
-      <ul>
-        <li>12 oz lean beef, thin strips</li>
-<li>2 tbsp low-sodium soy sauce</li>
-<li>1 tbsp fish sauce (low sodium)</li>
-<li>1 tsp honey</li>
-<li>1 tsp garlic powder</li>
-<li>1 tsp white pepper</li>
-<li>Lime wedges, herbs, and sticky rice to serve</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Steps</h3>
-      <ol>
-        <li>Marinate beef with soy, fish sauce, honey, garlic powder, white pepper for 30+ minutes.</li>
-<li>Dry in low oven (200°F/95°C) or air fryer until chewy; quickly pan-fry to crisp edges.</li>
-<li>Serve with herbs, lime, and sticky rice.</li>
-      </ol>
-    </div>
-    <a class="back" href="../index.html">← Back</a>
+  <h1>Sien Savanh (Lao Beef Jerky Salad)</h1>
+  <p class="day-date">Lean beef strips tossed with herbs, lime, and sticky rice.</p>
+  <img id="hero" alt="Sien Savanh (Lao Beef Jerky Salad)" data-photo="../photos/sien-savanh.jpg" data-illustration="../illustrations/sien-savanh-illustration.png" style="width:100%;max-width:820px;border-radius:12px;display:block;margin:0 auto 1rem;"/>
+  <script>
+    (function(){ const mode = localStorage.getItem('pref_image_style') || 'illustration';
+      const hero = document.getElementById('hero'); const src = mode==='photo' ? hero.dataset.photo : hero.dataset.illustration; hero.src = src; })();
+  </script>
+
+  <div class="recipe-card" style="max-width:820px;margin:0 auto;">
+    <h2>Ingredients (2 servings)</h2>
+    <ul>
+      <li>1 lb flank steak, sliced thin</li>
+      <li>1 tbsp lime juice</li>
+      <li>1 tsp fish sauce (low sodium)</li>
+      <li>1 tsp soy sauce (low sodium)</li>
+      <li>Mint & cilantro handful</li>
+      <li>Sticky rice, for serving</li>
+    </ul>
+
+    <h2>Steps</h2>
+    <ol>
+      <li>Dry in oven (lowest temp) or pan-sear strips until cooked.</li>
+      <li>Toss warm beef with lime, fish sauce, soy, and herbs. Serve with sticky rice.</li>
+    </ol>
+
+    <h3>Health Tips</h3>
+    <p>Lean cuts + short marination keeps sodium low and flavor bright.</p>
+
+    <p><a href="../index.html" class="back">← Back to Planner</a></p>
   </div>
 </body>
 </html>
