@@ -1,44 +1,32 @@
 # 📜 Changelog
 
-## [1.0.6] — 2025-08-09
-**Codename:** mango-curry onboarding
-
-### Added
-- First-run onboarding guide with tips for Settings, Share, Print, and Copy.
-- Settings: Date Options (Next occurrence vs This week), Week start day, Custom start date.
-
-### Changed
-- More robust list rendering from in-memory state.
+## [1.0.9.2] — 2025-08-09
+**Codename:** mango-curry zipfix
 
 ### Fixed
-- Rare blank list on first load.
+- Rebuilt distribution ZIP to ensure all files are included (previous package was empty for some users).
+- Verified data manifest and assets are published in the correct paths.
 
-## [1.0.5] — 2025-08-09
-**Codename:** mango-curry date options
+---
 
-- Added Date Options to Settings (week mode + custom start).
+## [1.0.9.1] — 2025-08-09
+**Codename:** manifest integrated
 
-## [1.0.4] — 2025-08-09
-**Codename:** mango-curry listfix
+### Added
+- Manifest-based loader to resolve occasional "Could not load grocery list" errors.
 
-- Fixed missing list on front page by rendering from state.
+### Changed
+- Cache-busting tags on day JSON requests.
 
-## [1.0.3] — 2025-08-09
-**Codename:** mango-curry datefix
+---
 
-- Show correct calendar date for selected weekday.
+## [1.0.9] — 2025-08-09
+**Codename:** full recipes + image style
 
-## [1.0.2] — 2025-08-08
-**Codename:** mango-curry sync
+### Added
+- 15 fully written recipes (Lao/Thai/Chinese) with photos & illustrations.
+- Settings toggle to switch between Photos and Illustrations.
+- Recipe banner shows per-day dishes.
 
-- About dialog + footer sync from CHANGELOG.md.
-
-## [1.0.1] — 2025-08-08
-**Codename:** mango-curry final+
-
-- About dialog and version footer improvements.
-
-## [1.0.0] — 2025-08-08
-**Codename:** mango-curry final
-
-- Initial themed release with share/print/copy, recipes, grouping, quantities.
+### Changed
+- Theme polish, onboarding & What's New toast.
