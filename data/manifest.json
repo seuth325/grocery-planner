@@ -1,0 +1,9 @@
+{
+  "monday": "data/monday_grocery.json",
+  "tuesday": "data/tuesday_grocery.json",
+  "wednesday": "data/wednesday_grocery.json",
+  "thursday": "data/thursday_grocery.json",
+  "friday": "data/friday_grocery.json",
+  "saturday": "data/saturday_grocery.json",
+  "sunday": "data/sunday_grocery.json"
+}
