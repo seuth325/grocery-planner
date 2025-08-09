@@ -6,13 +6,13 @@
     ],
     "links": [
       "recipes/larb-gai.html",
-      "recipes/steamed-fish.html"
+      "recipes/steamed-fish-ginger-soy.html"
     ]
   },
   "tuesday": {
     "meals": [
-      "Chicken Lettuce Wraps",
-      "Thai Green Curry (Shrimp)"
+      "Thai Lettuce Wraps",
+      "Green Curry Shrimp"
     ],
     "links": [
       "recipes/lettuce-wraps.html",
@@ -21,18 +21,18 @@
   },
   "wednesday": {
     "meals": [
-      "Yum Woon Sen (Glass Noodle Salad)",
-      "Broccoli & Mushroom Stir-fry"
+      "Glass Noodle Salad (Yum Woon Sen)",
+      "Garlic Mushroom Broccoli Stir-fry"
     ],
     "links": [
       "recipes/yum-woon-sen.html",
-      "recipes/broccoli-mushroom.html"
+      "recipes/garlic-broccoli.html"
     ]
   },
   "thursday": {
     "meals": [
       "Miso Soup + Cucumber Salad",
-      "Thai Basil Chicken (Pad Krapow)"
+      "Pad Krapow Gai (Thai Basil Chicken)"
     ],
     "links": [
       "recipes/miso-soup.html",
@@ -52,16 +52,16 @@
   "saturday": {
     "meals": [
       "Rice Paper Rolls",
-      "Sichuan Eggplant (Yu Xiang)"
+      "Yu Xiang Eggplant (Szechuan-Style)"
     ],
     "links": [
       "recipes/rice-paper-rolls.html",
-      "recipes/sichuan-eggplant.html"
+      "recipes/yu-xiang-eggplant.html"
     ]
   },
   "sunday": {
     "meals": [
-      "Use Leftovers",
+      "Leftovers",
       "Tom Yum Soup"
     ],
     "links": [
