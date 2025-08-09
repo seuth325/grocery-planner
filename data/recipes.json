@@ -18,55 +18,5 @@
       "recipes/lettuce-wraps.html",
       "recipes/green-curry-shrimp.html"
     ]
-  },
-  "wednesday": {
-    "meals": [
-      "Glass Noodle Salad (Yum Woon Sen)",
-      "Garlic Mushroom Broccoli Stir-fry"
-    ],
-    "links": [
-      "recipes/yum-woon-sen.html",
-      "recipes/garlic-broccoli.html"
-    ]
-  },
-  "thursday": {
-    "meals": [
-      "Miso Soup + Cucumber Salad",
-      "Thai Basil Chicken (Pad Krapow)"
-    ],
-    "links": [
-      "recipes/miso-soup.html",
-      "recipes/pad-krapow.html"
-    ]
-  },
-  "friday": {
-    "meals": [
-      "Chinese Cucumber Salad + Dumplings",
-      "Lemongrass Chicken Skewers"
-    ],
-    "links": [
-      "recipes/cucumber-salad.html",
-      "recipes/lemongrass-chicken.html"
-    ]
-  },
-  "saturday": {
-    "meals": [
-      "Rice Paper Rolls",
-      "Yu Xiang Eggplant"
-    ],
-    "links": [
-      "recipes/rice-paper-rolls.html",
-      "recipes/yu-xiang-eggplant.html"
-    ]
-  },
-  "sunday": {
-    "meals": [
-      "Leftover Rolls/Salad",
-      "Tom Yum Soup"
-    ],
-    "links": [
-      "recipes/leftovers.html",
-      "recipes/tom-yum.html"
-    ]
   }
 }
