@@ -1,31 +1,25 @@
 # 📜 Changelog
 
-## [1.0.4] — 2025-08-09
-**Codename:** mango-curry listfix
+## [1.0.5] — 2025-08-09
+**Codename:** mango-curry date options
 
-### Fixed
-- Front page grocery list not rendering reliably: render now uses in-memory state after fetch.
-- Safer initial load & clearer error messaging for missing JSON files.
+### Added
+- Date Options: Next occurrence vs This week (Mon–Sun)
+- Week starts on selector + Custom week start date
 
 ### Changed
-- Date header now shows the next occurrence of the selected weekday.
+- Date display respects Settings and updates instantly
+
+## [1.0.4] — 2025-08-09
+**Codename:** mango-curry listfix
+- Render from in-memory state to avoid blank list
+- Safer initial load and clearer JSON error
 
 ## [1.0.3] — 2025-08-09
 **Codename:** mango-curry datefix
+- Show correct calendar date for selected weekday
 
-- Added date display under the title for the selected weekday.
-
-## [1.0.2] — 2025-08-09
+## [1.0.2] — 2025-08-08
 **Codename:** mango-curry sync
+- About modal + footer read version from CHANGELOG.md
 
-- About modal & footer read version from CHANGELOG.md.
-
-## [1.0.1] — 2025-08-08
-**Codename:** mango-curry final+
-
-- About dialog & auto footer version bump via version.json.
-
-## [1.0.0] — 2025-08-08
-**Codename:** mango-curry final
-
-- Initial themed release with share/print/copy/settings and recipe banner.
