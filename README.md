@@ -2,6 +2,6 @@
 
 # Grocery Planner 🥗🍛
 
-A warm, mango-curry-themed daily grocery list planner for two. Thai & Chinese-inspired, health-conscious.
+Mango-curry themed daily grocery viewer with share/print/copy, categories, and recipe links.
 
-See CHANGELOG.md for versions. Deployed on GitHub Pages.
+See it on GitHub Pages after upload.
