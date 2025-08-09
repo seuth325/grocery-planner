@@ -1,13 +1,5 @@
 {
-  "version": "1.0.1",
-  "codename": "mango-curry final+",
-  "released": "2025-08-09",
-  "changelog": [
-    "New Settings modal with toggles for Group by Category and Show Quantities (persisted).",
-    "Auto-group by category on day change; quantities shown inline per preference.",
-    "Mango-curry themed UI polish: buttons, recipe banner, striped lists.",
-    "Share/Print/Copy actions improved; quantity-aware copy formats added.",
-    "New About dialog and footer now show version & changelog.",
-    "Google Analytics hook added (replace G-XXXXXXX)."
-  ]
+  "version": "1.0.4",
+  "codename": "mango-curry listfix",
+  "date": "2025-08-09"
 }

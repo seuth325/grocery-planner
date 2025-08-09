@@ -1,45 +1,31 @@
 # 📜 Changelog
 
+## [1.0.4] — 2025-08-09
+**Codename:** mango-curry listfix
+
+### Fixed
+- Front page grocery list not rendering reliably: render now uses in-memory state after fetch.
+- Safer initial load & clearer error messaging for missing JSON files.
+
+### Changed
+- Date header now shows the next occurrence of the selected weekday.
+
 ## [1.0.3] — 2025-08-09
 **Codename:** mango-curry datefix
 
-### Added
-- Correct date display below the title for the currently selected weekday.
+- Added date display under the title for the selected weekday.
 
-### Changed
-- Auto-renders date like "Friday, August 9, 2025" for the selected day (next occurrence).
+## [1.0.2] — 2025-08-09
+**Codename:** mango-curry sync
 
-### Fixed
-- Day/date mismatch in header area.
-
----
-
-## [1.0.2] — 2025-08-08
-**Codename:** mango‑curry sync
-
-### Added
-- About dialog now fetches `CHANGELOG.md` directly.
-- Footer version auto-updates from changelog.
-
----
+- About modal & footer read version from CHANGELOG.md.
 
 ## [1.0.1] — 2025-08-08
-**Codename:** mango‑curry final+
+**Codename:** mango-curry final+
 
-### Added
-- About dialog and automatic footer version bump from version.json (now superseded by CHANGELOG).
-
----
+- About dialog & auto footer version bump via version.json.
 
 ## [1.0.0] — 2025-08-08
-**Codename:** mango‑curry final
+**Codename:** mango-curry final
 
-### Added
-- Animated background, gradient header, themed buttons
-- Recipe banner + per-day links
-- Auto-grouped grocery list by category
-- Settings modal (Group by Category + Show Quantities)
-- Quantity suggestions for two
-- Share / Print / Copy All / Copy by Category
-- Print-friendly CSS
-- README banner & Open Graph meta
+- Initial themed release with share/print/copy/settings and recipe banner.

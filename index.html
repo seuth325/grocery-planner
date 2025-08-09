@@ -1,33 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Daily Grocery Viewer</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Grocery Viewer</title>
+<link rel="stylesheet" href="style.css">
 
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="🥢 Daily Grocery List Viewer" />
-  <meta property="og:description" content="View and share your healthy Thai & Chinese-inspired grocery lists for every day of the week." />
-  <meta property="og:image" content="https://seuth325.github.io/grocery-planner/preview.jpg" />
-  <meta property="og:url" content="https://seuth325.github.io/grocery-planner/" />
-  <meta property="og:type" content="website" />
+<!-- Open Graph / Twitter -->
+<meta property="og:title" content="🥢 Daily Grocery List Viewer" />
+<meta property="og:description" content="View and share your healthy Thai & Chinese-inspired grocery lists for every day of the week." />
+<meta property="og:image" content="https://seuth325.github.io/grocery-planner/preview.jpg" />
+<meta property="og:url" content="https://seuth325.github.io/grocery-planner/" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="🥢 Daily Grocery List Viewer" />
+<meta name="twitter:description" content="View and share your healthy Thai & Chinese-inspired grocery lists for every day of the week." />
+<meta name="twitter:image" content="https://seuth325.github.io/grocery-planner/preview.jpg" />
 
-  <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="🥢 Daily Grocery List Viewer" />
-  <meta name="twitter:description" content="View and share your healthy Thai & Chinese-inspired grocery lists for every day of the week." />
-  <meta name="twitter:image" content="https://seuth325.github.io/grocery-planner/preview.jpg" />
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXX', { anonymize_ip: true, page_title: document.title });
-  </script>
-
-  <link rel="stylesheet" href="style.css">
+<!-- GA4 placeholder -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXX', { anonymize_ip: true, page_title: document.title });
+</script> -->
 </head>
 <body>
   <h1>🥢 Daily Grocery List</h1>
@@ -38,24 +35,24 @@
     <ul id="recipe-links"></ul>
   </div>
 
-  <select id="day-select">
-    <option value="monday">Monday</option>
-    <option value="tuesday">Tuesday</option>
-    <option value="wednesday">Wednesday</option>
-    <option value="thursday">Thursday</option>
-    <option value="friday">Friday</option>
-    <option value="saturday">Saturday</option>
-    <option value="sunday">Sunday</option>
-  </select>
-
   <div class="actions">
+    <select id="day-select">
+      <option value="monday">Monday</option>
+      <option value="tuesday">Tuesday</option>
+      <option value="wednesday">Wednesday</option>
+      <option value="thursday">Thursday</option>
+      <option value="friday">Friday</option>
+      <option value="saturday">Saturday</option>
+      <option value="sunday">Sunday</option>
+    </select>
     <button id="share-btn">📤 Share</button>
     <button id="print-btn">🖨️ Print</button>
     <button id="copy-btn">📋 Copy All</button>
     <button id="copy-by-category-btn">📋 Copy by Category</button>
     <button id="settings-btn">⚙️ Settings</button>
+    <button id="about-btn">ℹ️ About</button>
   </div>
-  <p id="share-status" style="display:none;">✅ Done!</p>
+  <p id="share-status" style="display:none;">✅ Action done</p>
 
   <ul id="grocery-list"></ul>
 
@@ -63,27 +60,19 @@
   <div id="settings-modal" class="modal" aria-hidden="true">
     <div class="modal-content">
       <h3>Preferences</h3>
-      <label class="switch-row">
-        <input type="checkbox" id="pref-group"> <span>Group items by category</span>
-      </label>
-      <label class="switch-row">
-        <input type="checkbox" id="pref-qty"> <span>Show quantities</span>
-      </label>
-      <div class="modal-actions">
-        <button id="settings-close">Done</button>
-      </div>
+      <label class="switch-row"><input type="checkbox" id="pref-group"> <span>Group items by category</span></label>
+      <label class="switch-row"><input type="checkbox" id="pref-qty"> <span>Show quantities</span></label>
+      <div class="modal-actions"><button id="settings-close">Done</button></div>
     </div>
   </div>
 
   <footer id="app-footer" aria-label="version">
-    <span>Grocery Planner — <span id="version-span">v?</span></span>
+    <span>Grocery Planner — v1.0.4 “mango‑curry listfix”</span>
     <span> · </span>
     <a href="https://seuth325.github.io/grocery-planner/" target="_blank" rel="noopener">Site</a>
-    <span> · </span>
-    <button id="about-btn" style="background:none;border:none;color:#FF8C42;cursor:pointer;">ℹ️ About</button>
   </footer>
 
-  <script src="script.js"></script>
-  <script src="about.js"></script>
+<script src="script.js"></script>
+<script src="about.js"></script>
 </body>
 </html>

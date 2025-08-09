@@ -2,16 +2,17 @@
 
 # Grocery Planner 🥗🍛
 
-A warm, mango-curry-themed daily grocery list planner for two, focused on healthy Thai & Chinese-inspired meals.
+A warm, mango-curry-themed daily grocery list planner for two people, focused on healthy Thai & Chinese inspired meals.
+
+See it live (after you deploy on GitHub Pages):
+`https://<your-username>.github.io/grocery-planner/`
 
 ## 🌟 Highlights
-- Animated mango-curry background (30s)
-- Gradient mango-orange header & themed buttons
+- Animated mango-curry background + gradient header
 - Recipe banner with per-day links
-- **Settings modal** (Group by Category + Show Quantities) with persistence
-- Auto-grouped grocery list with stripes
-- Quantity suggestions for two (in UI + copied text)
-- Share / Print / Copy All / Copy by Category
+- **Settings**: Group by Category & Show Quantities (persists)
+- Auto-grouped list with stripes
+- Share · Print · Copy All · Copy by Category
+- Quantity suggestions for two (on-screen + copied)
+- Open Graph/Twitter meta for rich sharing
 - Print-friendly CSS
-- Open Graph/Twitter meta + preview image
-- About dialog reads `CHANGELOG.md`
