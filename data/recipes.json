@@ -37,7 +37,7 @@
   ],
   "wednesday": [
     {
-      "name": "Tam Mak Hoong (Lao Papaya Salad)",
+      "name": "Tam Mak Hoong (Papaya Salad)",
       "link": "recipes/tam-mak-hoong.html",
       "images": {
         "photo": "photos/tam-mak-hoong.jpg",
@@ -55,7 +55,7 @@
   ],
   "thursday": [
     {
-      "name": "Steamed Fish with Ginger & Scallions",
+      "name": "Steamed Fish with Ginger",
       "link": "recipes/steamed-fish-ginger.html",
       "images": {
         "photo": "photos/steamed-fish-ginger.jpg",
@@ -73,7 +73,7 @@
   ],
   "friday": [
     {
-      "name": "Sien Savanh (Lao Beef Jerky Salad)",
+      "name": "Sien Savanh (Beef Jerky Salad)",
       "link": "recipes/sien-savanh.html",
       "images": {
         "photo": "photos/sien-savanh.jpg",
@@ -91,7 +91,7 @@
   ],
   "saturday": [
     {
-      "name": "Khao Piak Sen (Lao Chicken Noodle Soup)",
+      "name": "Khao Piak Sen (Lao Noodle Soup)",
       "link": "recipes/khao-piak-sen.html",
       "images": {
         "photo": "photos/khao-piak-sen.jpg",
@@ -117,11 +117,11 @@
       }
     },
     {
-      "name": "Light Chinese Vegetable Soup",
-      "link": "recipes/light-chinese-vegetable-soup.html",
+      "name": "Mango Sticky Rice",
+      "link": "recipes/mango-sticky-rice.html",
       "images": {
-        "photo": "photos/light-chinese-vegetable-soup.jpg",
-        "illustration": "illustrations/light-chinese-vegetable-soup-illustration.png"
+        "photo": "photos/mango-sticky-rice.jpg",
+        "illustration": "illustrations/mango-sticky-rice-illustration.png"
       }
     }
   ]
