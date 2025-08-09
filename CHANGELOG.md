@@ -1,44 +1,70 @@
 # 📜 Changelog
 
+## [1.0.7] — 2025-08-09
+**Codename:** mango-curry toast
+
+### Added
+- “What’s New” toast that appears after updates (reads latest version from CHANGELOG.md).
+- Minor polish.
+
+### Changed
+- Internal refactors for reliability.
+
+### Fixed
+- Small UI edge cases.
+
+---
+
 ## [1.0.6] — 2025-08-09
 **Codename:** mango-curry onboarding
 
 ### Added
-- First-run onboarding guide with tips for Settings, Share, Print, and Copy.
-- Settings: Date Options (Next occurrence vs This week), Week start day, Custom start date.
+- First-run onboarding overlay with quick tips; re-open via ❓ Help.
 
-### Changed
-- More robust list rendering from in-memory state.
-
-### Fixed
-- Rare blank list on first load.
+---
 
 ## [1.0.5] — 2025-08-09
 **Codename:** mango-curry date options
 
-- Added Date Options to Settings (week mode + custom start).
+### Added
+- Date Options in Settings: Next occurrence / This week, Week starts on, Custom week start date.
+
+---
 
 ## [1.0.4] — 2025-08-09
 **Codename:** mango-curry listfix
 
-- Fixed missing list on front page by rendering from state.
+### Fixed
+- Stable state rendering to avoid missing list on initial load.
+
+---
 
 ## [1.0.3] — 2025-08-09
 **Codename:** mango-curry datefix
 
-- Show correct calendar date for selected weekday.
+### Added
+- Correct date display under the title for selected weekday.
+
+---
 
 ## [1.0.2] — 2025-08-08
 **Codename:** mango-curry sync
 
-- About dialog + footer sync from CHANGELOG.md.
+### Added
+- About dialog pulls version/changelog from CHANGELOG.md; footer synced.
+
+---
 
 ## [1.0.1] — 2025-08-08
 **Codename:** mango-curry final+
 
-- About dialog and version footer improvements.
+### Added
+- About dialog; footer version bump.
+
+---
 
 ## [1.0.0] — 2025-08-08
 **Codename:** mango-curry final
 
-- Initial themed release with share/print/copy, recipes, grouping, quantities.
+### Added
+- Initial themed release with grouping, quantities, share/print/copy, recipe banner, OG tags.
