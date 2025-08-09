@@ -2,7 +2,7 @@
   "monday": {
     "meals": [
       "Larb Gai (Thai Minced Chicken Salad)",
-      "Steamed Fish with Ginger & Scallion"
+      "Steamed Fish with Ginger & Soy"
     ],
     "links": [
       "recipes/larb-gai.html",
@@ -11,18 +11,18 @@
   },
   "tuesday": {
     "meals": [
-      "Chicken Lettuce Wraps",
-      "Thai Green Curry (Shrimp)"
+      "Thai Lettuce Wraps",
+      "Green Curry Shrimp"
     ],
     "links": [
       "recipes/lettuce-wraps.html",
-      "recipes/green-curry.html"
+      "recipes/green-curry-shrimp.html"
     ]
   },
   "wednesday": {
     "meals": [
-      "Yum Woon Sen (Glass Noodle Salad)",
-      "Garlic Broccoli & Mushrooms"
+      "Glass Noodle Salad (Yum Woon Sen)",
+      "Garlic Mushroom Broccoli Stir-fry"
     ],
     "links": [
       "recipes/yum-woon-sen.html",
@@ -52,7 +52,7 @@
   "saturday": {
     "meals": [
       "Rice Paper Rolls",
-      "Yu Xiang Eggplant (Szechuan)"
+      "Yu Xiang Eggplant"
     ],
     "links": [
       "recipes/rice-paper-rolls.html",
@@ -61,7 +61,7 @@
   },
   "sunday": {
     "meals": [
-      "Leftovers / Rolls",
+      "Leftover Rolls/Salad",
       "Tom Yum Soup"
     ],
     "links": [
