@@ -1,23 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Grocery Planner v1.0.8 (Lao Expansion)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <style>
-    body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:2rem;}
-    h1{background:linear-gradient(90deg,#FF8C42,#FFA600);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-    .card{background:#fff;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.08);padding:1rem;max-width:720px}
-    code{background:#fff3e4;padding:.2rem .4rem;border-radius:6px}
-    a.btn{display:inline-block;margin-top:8px;background:#FF8C42;color:white;padding:.5rem .9rem;border-radius:8px;text-decoration:none;font-weight:700}
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daily Grocery Viewer</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="🥢 Daily Grocery List Viewer" />
+  <meta property="og:description" content="View and share your healthy Thai & Chinese-inspired grocery lists for every day of the week." />
+  <meta property="og:image" content="preview.jpg" />
+  <meta property="og:url" content="." />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="🥢 Daily Grocery List Viewer" />
+  <meta name="twitter:description" content="View and share your healthy Thai & Chinese-inspired grocery lists for every day of the week." />
+  <meta name="twitter:image" content="preview.jpg" />
+
+  <!-- GA4 (replace G-XXXXXXX) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX', { anonymize_ip: true, page_title: document.title });
+  </script>
 </head>
 <body>
-  <h1>Grocery Planner v1.0.8 — Lao Expansion</h1>
-  <div class="card">
-    <p>This package contains new Lao dishes, updated <code>data/recipes.json</code>, daily grocery lists, and recipe pages under <code>/recipes</code>.</p>
-    <p>Drop these files into your existing project root (or deploy as a fresh site).</p>
-    <a class="btn" href="recipes/larb-gai.html">Preview: Larb Gai</a>
+  <h1>🥢 Daily Grocery List</h1>
+  <p id="day-date" class="day-date"></p>
+
+  <div class="actions">
+    <select id="day-select">
+      <option value="monday">Monday</option>
+      <option value="tuesday">Tuesday</option>
+      <option value="wednesday">Wednesday</option>
+      <option value="thursday">Thursday</option>
+      <option value="friday">Friday</option>
+      <option value="saturday">Saturday</option>
+      <option value="sunday">Sunday</option>
+    </select>
+    <button id="share-btn">📤 Share</button>
+    <button id="print-btn">🖨️ Print</button>
+    <button id="copy-btn">📋 Copy All</button>
+    <button id="copy-by-category-btn">📋 Copy by Category</button>
+    <button id="settings-btn">⚙️ Settings</button>
+    <button id="about-btn">ℹ️ About</button>
   </div>
+
+  <div id="recipe-banner">
+    <h2 id="recipe-title"></h2>
+    <ul id="recipe-links"></ul>
+  </div>
+
+  <div id="grocery-list"></div>
+
+  <p id="share-status" style="display:none;color:green;font-weight:600;"></p>
+
+  <!-- Settings Modal -->
+  <div id="settings-modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <h3>Preferences</h3>
+
+      <label class="switch-row">
+        <input type="checkbox" id="pref-group"> 
+        <span>Group items by category</span>
+      </label>
+
+      <label class="switch-row">
+        <input type="checkbox" id="pref-qty"> 
+        <span>Show quantities</span>
+      </label>
+
+      <hr style="margin:0.6rem 0; opacity:.25;">
+
+      <h4 style="margin:.3rem 0 .4rem; color:#FF8C42;">Date Options</h4>
+
+      <div class="switch-row" style="gap:.4rem;">
+        <input type="radio" name="pref-date-mode" id="pref-date-next" value="next">
+        <label for="pref-date-next">Next occurrence</label>
+      </div>
+
+      <div class="switch-row" style="gap:.4rem;">
+        <input type="radio" name="pref-date-mode" id="pref-date-week" value="week">
+        <label for="pref-date-week">This week (Mon–Sun)</label>
+      </div>
+
+      <div id="week-options" style="margin-left:1.6rem; display:none;">
+        <label class="switch-row" style="gap:.6rem;">
+          <span>Week starts on</span>
+          <select id="pref-week-start">
+            <option value="monday">Monday</option>
+            <option value="tuesday">Tuesday</option>
+            <option value="wednesday">Wednesday</option>
+            <option value="thursday">Thursday</option>
+            <option value="friday">Friday</option>
+            <option value="saturday">Saturday</option>
+            <option value="sunday">Sunday</option>
+          </select>
+        </label>
+
+        <label class="switch-row" style="gap:.6rem;">
+          <span>Custom week start (optional)</span>
+          <input type="date" id="pref-custom-start">
+        </label>
+        <small style="opacity:.7; margin-left:.2rem;">If set, your week is the 7 days starting from this date.</small>
+      </div>
+
+      <div class="modal-actions">
+        <button id="settings-close">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Onboarding -->
+  <div id="onboard" class="onboard hidden" aria-hidden="true">
+    <div class="onboard-card">
+      <h3>Welcome to Grocery Planner 👋</h3>
+      <ol class="onboard-steps">
+        <li><b>⚙️ Settings</b> — set grouping, quantities, and date options.</li>
+        <li><b>📤 Share</b> — send today’s list or copy link.</li>
+        <li><b>🖨️ Print</b> — clean two‑column print layout.</li>
+        <li><b>📋 Copy</b> — flat or by category (with quantities).</li>
+      </ol>
+      <div class="onboard-actions">
+        <label class="again"><input type="checkbox" id="dont-show-again"> Don’t show again</label>
+        <button id="onboard-close">Got it</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="whats-new-toast"></div>
+
+  <footer id="app-footer" aria-label="version">
+    <span id="version-span">Grocery Planner — v?.?.? </span>
+    <span> · </span>
+    <a href="./" target="_blank" rel="noopener">Site</a>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
